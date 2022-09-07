@@ -1,5 +1,6 @@
 {
   "name": "ic_git_mirror",
+  "author": "Ossian <self@ossian.dev>",
   "version": "0.1.0",
   "description": "Internet Computer starter application",
   "keywords": [
