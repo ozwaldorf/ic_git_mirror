@@ -1,0 +1,19 @@
+{
+  "canisters": {
+    "assets": {
+      "frontend": {
+        "entrypoint": "public/index.html"
+      },
+      "source": ["public"],
+      "type": "assets"
+    }
+  },
+  "dfx": "0.11.1",
+  "networks": {
+    "local": {
+      "bind": "127.0.0.1:8000",
+      "type": "ephemeral"
+    }
+  },
+  "version": 1
+}
