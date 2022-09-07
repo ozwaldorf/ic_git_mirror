@@ -28,35 +28,48 @@ img {
     border-radius: 5px;
 }
 
-pre {
+code {
     background: #1e1e1e;
     color: #ddd;
     border-left: 4px solid #7bce81;
-    page-break-inside: avoid;
     font-family: monospace;
     font-size: 15px;
     line-height: 1.6;
     margin-bottom: 1.6em;
     max-width: 100%;
-    overflow: auto;
-    padding: 1em 1.5em;
-    display: block;
-    word-wrap: break-word;
+    overflow: hidden;
+    display: flex;
     position: relative;
-    overflow: auto;
     border-radius: 3px;
 }
 
-pre span {
-    background: #1e1e1e;
-    color: #999;
-    position: absolute;
-    top: 1em;
-    right: 1em;
-    font-size: 1em;
+code pre {
+    align-self: center;
+    flex: 1;
+    margin: 1em 0em 1em 1.5em;
+    overflow-y: hidden;
+    overflow-x: auto;
+
+    /* IE and Edge */
+    -ms-overflow-style: none;
+    /* Firefox */
+    scrollbar-width: none;
 }
 
-pre span:hover {
+code pre::-webkit-scrollbar {
+    display: none;
+}
+
+code span {
+    margin: 1em;
+    background: none;
+    color: #aaa;
+    font-size: 1em;
+    transition: 0.3s;
+}
+
+code span:hover {
+    color: #fff;
     cursor: pointer;
 }
 

@@ -21,10 +21,10 @@ window.onload = async () => {
   }
 
   document.getElementById("repos").innerHTML = Array.from(repos)
-    .map((repo) => `<pre>git clone ${host}/${repo}</pre>`)
+    .map((repo) => `<code><pre>git clone ${host}/${repo}</pre></code>`)
     .join("");
 
-  let blocks = document.querySelectorAll("pre");
+  let blocks = document.querySelectorAll("code");
 
   blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
