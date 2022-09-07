@@ -17,13 +17,11 @@ repos:
 		cd ..; \
 	done
 
-build: repos
-	yarn build
-
-
-local: build replica
+local: replica
 	@dfx deploy
 
-ic: repos
-	@DFX_NETWORK=ic yarn build
+ic:
 	@dfx deploy --network=ic
+
+dev: local
+	@yarn && yarn start

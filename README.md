@@ -2,6 +2,8 @@
 
 Mirror git repos onto IC asset cansiters! The asset canister will become a self contained git host, providing read only copies of the repositories.
 
+With git, we can pull a bare repository definition, and update the info to be enough for a simple http server. With this, we can pack up a given repo, upload it to an asset canister, and serve the repository from the IC. This project defines a template you can deploy to the IC and upload your own dumb-http repositories.
+
 # Mainnet example
 
 [https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/](https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/)
@@ -26,18 +28,25 @@ This will clone bare and build server info for the repositories specified in the
 make repos
 ```
 
+(optional) Manually override the repos to deploy:
+
+```bash
+REPOS=("https://github.com/dfinity/ic") make repos
+```
+
+> Note: You should just edit the make file for your repos
+
 ## Deploying locally
 
-> Deploying will automatically build the repos beforehand
+> Note: This will automatically start up the replica, if not running already.
 
 ```bash
 make local
 ```
 
-## Deploying to ic
+## Deploying to the IC
 
-> Deploying will automatically build the repos beforehand
-
+> Note: Make sure to build before hand!
 
 ```bash
 make ic
@@ -45,7 +54,7 @@ make ic
 
 ## Cloning your mirrored repositories
 
-At this point, you should be able to clone the repos with any git client like so:
+At this point, you should be able to clone the locally hosted repos with any git client like so:
 
 ```bash
 git clone http://rrkah-fqaaa-aaaaa-aaaaq-cai.localhost:8000/ic_otp.git
@@ -54,4 +63,12 @@ git clone http://rrkah-fqaaa-aaaaa-aaaaq-cai.localhost:8000/ic_otp.git
 git clone http://rrkah-fqaaa-aaaaa-aaaaq-cai.localhost:8000/ic-playground.git
 ```
 
-> Note: although untested, you should be able to clone repos from `canister.raw.ic0.app` for mainnet deployments
+## Starting the development frontend
+
+```bash
+make dev
+```
+
+# License
+
+[Licensed](LICENSE.md) under MIT
