@@ -35,7 +35,6 @@ function initCanisterEnv() {
   }, {});
 }
 const canisterEnvVariables = initCanisterEnv();
-
 console.log(canisterEnvVariables);
 
 const isDevelopment = process.env.NODE_ENV !== "production";
@@ -115,7 +114,10 @@ module.exports = {
       },
     },
     hot: true,
-    watchFiles: [path.resolve(__dirname, "src")],
+    watchFiles: [
+      path.resolve(__dirname, "src"),
+      path.resolve(__dirname, "assets"),
+    ],
     liveReload: true,
   },
 };

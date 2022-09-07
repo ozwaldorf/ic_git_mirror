@@ -31,7 +31,7 @@ window.onload = async () => {
   blocks.forEach((block) => {
     // only add button if browser supports Clipboard API
     if (navigator.clipboard) {
-      let button = document.createElement("button");
+      let button = document.createElement("i", { "data-feather": "copy" });
       button.innerHTML = copyButtonLabel;
       button.addEventListener("click", copy);
       block.appendChild(button);
@@ -42,10 +42,10 @@ window.onload = async () => {
 };
 
 async function copy(event) {
+  console.log(event);
   const button = event.srcElement;
   const pre = button.parentElement;
   let text = pre.innerText;
-  console.log(text);
   await navigator.clipboard.writeText(text);
 
   button.innerHTML = `<i data-feather="check"></i>`;

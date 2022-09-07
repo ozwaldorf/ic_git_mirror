@@ -7,10 +7,12 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    background-color: #0e0e0e;
+    color: #fff;
 }
 
-footer {
-    margin-top: auto;
+*:focus {
+    outline-color: #999;
 }
 
 img {
@@ -21,18 +23,16 @@ img {
 }
 
 #main {
-    margin: 10px auto;
+    margin: 0 auto;
     padding: 10px 40px;
-    border: 1px solid #222;
+    border: 1px solid #fff;
     border-radius: 5px;
 }
 
-
 pre {
-    background: #f4f4f4;
-    border: 1px solid #ddd;
-    border-left: 3px solid #2db536;
-    color: #444;
+    background: #1e1e1e;
+    color: #ddd;
+    border-left: 4px solid #7bce81;
     page-break-inside: avoid;
     font-family: monospace;
     font-size: 15px;
@@ -43,38 +43,34 @@ pre {
     padding: 1em 1.5em;
     display: block;
     word-wrap: break-word;
-}
-
-*,
-*:before,
-*:after {
-    box-sizing: border-box;
-}
-
-pre {
     position: relative;
     overflow: auto;
-    border-radius: 5px;
+    border-radius: 3px;
 }
 
-button {
-    position: absolute;
-    top: 5px;
-    right: 5px;
+i {
+    background: #1e1e1e;
     color: #999;
-    font-size: .9rem;
-    padding: .15rem;
-    border: 1px solid;
-    border-radius: 5px;
-    /* text-shadow: #c4c4c4 0 0 2px; */
+    position: absolute;
+    top: 3px;
+    right: 3px;
+    font-size: 1em;
 }
 
-button:hover {
+i:hover {
     cursor: pointer;
-    box-shadow: #999 0 0 2px;
-    transition: 0.3s;
 }
 
-*:focus {
-    outline-color: #777;
+svg {
+    pointer-events: none;
+}
+
+footer {
+    margin-top: auto;
+}
+
+a:link,
+a:visited {
+    color: #7bce81;
+    text-decoration: none;
 }
