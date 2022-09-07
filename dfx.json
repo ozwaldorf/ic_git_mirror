@@ -1,11 +1,17 @@
 {
   "canisters": {
-    "assets": {
+    "git_assets": {
       "frontend": {
-        "entrypoint": "public/index.html"
+        "entrypoint": "dist/index.html"
       },
-      "source": ["public"],
+      "source": ["dist", "assets"],
       "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
     }
   },
   "dfx": "0.9.3",

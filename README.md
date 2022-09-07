@@ -1,8 +1,14 @@
 # ic_git_mirror
 
-Mirror git repos onto IC asset cansiters!
+Mirror git repos onto IC asset cansiters! The asset canister will become a self contained git host, providing read only copies of the repositories.
+
+![image](https://user-images.githubusercontent.com/8976745/188795035-c93a467c-e1d1-405e-9b1c-619ec799a07f.png)
 
 ## Mainnet example
+
+[https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/](https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/)
+
+> Any git client that supports dumb-http can clone a repo from an asset canister host (in raw mode).
 
 ```bash
 git clone https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/ic_otp.git

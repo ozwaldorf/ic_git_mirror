@@ -2,8 +2,14 @@
 
 REPOS?="https://github.com/ozwaldorf/ic_otp" "https://github.com/ozwaldorf/ic-playground"
 
+replica:
+	dfx ping local &>/dev/null || dfx start --background --clean
+
+stop-replica:
+	dfx stop
+
 repos:
-	@cd public && for repo in $(REPOS); do \
+	@cd assets && for repo in $(REPOS); do \
 		rm -rf $$(basename $$repo).git; \
 		git clone --bare $$repo; \
 		cd $$(basename $$repo).git; \
@@ -11,14 +17,13 @@ repos:
 		cd ..; \
 	done
 
-replica:
-	dfx ping local &>/dev/null || dfx start --background --clean
+build: repos
+	yarn build
 
-stop-replica:
-	dfx stop
 
-local: repos replica
+local: build replica
 	@dfx deploy
 
 ic: repos
+	@DFX_NETWORK=ic yarn build
 	@dfx deploy --network=ic
