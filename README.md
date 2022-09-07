@@ -2,7 +2,17 @@
 
 Mirror git repos onto IC asset cansiters!
 
-## Using the Project
+## Mainnet example
+
+```bash
+git clone https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/ic_otp.git
+```
+
+```bash
+git clone https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/ic-playground.git
+```
+
+## Using the project
 
 ### Building the "dumb-http" repositories
 
@@ -35,7 +45,8 @@ At this point, you should be able to clone the repos with any git client like so
 
 ```bash
 git clone http://rrkah-fqaaa-aaaaa-aaaaq-cai.localhost:8000/ic_otp.git
-
+```
+```bash
 git clone http://rrkah-fqaaa-aaaaa-aaaaq-cai.localhost:8000/ic-playground.git
 ```
 
