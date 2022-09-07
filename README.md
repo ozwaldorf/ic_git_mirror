@@ -1,4 +1,4 @@
-![image](https://user-images.githubusercontent.com/8976745/188801429-a737c73f-3449-479a-be1e-ceb4860e3540.png)
+![image](https://user-images.githubusercontent.com/8976745/188822231-dc7f7c90-5f8e-4481-bf19-bc313e96e344.png)
 
 # ic_git_mirror
 
