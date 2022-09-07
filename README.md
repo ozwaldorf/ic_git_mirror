@@ -1,10 +1,8 @@
-![image](https://user-images.githubusercontent.com/8976745/188822231-dc7f7c90-5f8e-4481-bf19-bc313e96e344.png)
-
-# ic_git_mirror
+![image](https://user-images.githubusercontent.com/8976745/188822385-765db007-a757-4db2-9ef1-c9e93bb29f9e.png)
 
 Mirror git repos onto IC asset cansiters! The asset canister will become a self contained git host, providing read only copies of the repositories.
 
-## Mainnet example
+# Mainnet example
 
 [https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/](https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/)
 
@@ -18,9 +16,9 @@ git clone https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/ic_otp.git
 git clone https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/ic-playground.git
 ```
 
-## Using the project
+# Using the project
 
-### Building the "dumb-http" repositories
+## Building the "dumb-http" repositories
 
 This will clone bare and build server info for the repositories specified in the `REPOS` enviroment variable, or the defaults included in the make file.
 
@@ -28,7 +26,7 @@ This will clone bare and build server info for the repositories specified in the
 make repos
 ```
 
-### Deploying locally
+## Deploying locally
 
 > Deploying will automatically build the repos beforehand
 
@@ -36,7 +34,7 @@ make repos
 make local
 ```
 
-### Deploying to ic
+## Deploying to ic
 
 > Deploying will automatically build the repos beforehand
 
@@ -45,7 +43,7 @@ make local
 make ic
 ```
 
-### Cloning your mirrored repositories
+## Cloning your mirrored repositories
 
 At this point, you should be able to clone the repos with any git client like so:
 
