@@ -6,7 +6,7 @@ With git, we can pull a bare repository definition, and update the info to be en
 
 # Mainnet example
 
-[https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/](https://34a4i-5iaaa-aaaah-abqwq-cai.raw.ic0.app/)
+[https://git.icp.xyz/](https://git.icp.xyz/)
 
 > Any git client that supports dumb-http can clone a repo from an asset canister host (in raw mode).
 
